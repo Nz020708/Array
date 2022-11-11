@@ -1,4 +1,4 @@
-const arr=[50,7,90,11,46,9,2,39];
+const arr=[1,2,3,4,5,6];
 
 
 //1st task
@@ -119,8 +119,22 @@ const arr=[50,7,90,11,46,9,2,39];
 
 
 //8th task
+function Func(array) {
+   if (array.length%2==0) {
+           for (let i = 0; i < array.length/2; i++) {
+                  let temp;
+                  temp=array[i];
+                  array[i]=array[i+array.length/2];
+                  array[i+array.length/2]=temp;
+     
+        
+            }
+      }
+      return array;
 
-
+}
+  
+console.log(Func(arr));
 //9th task
 
 // function bubbleSort(array) {
@@ -161,20 +175,39 @@ const arr=[50,7,90,11,46,9,2,39];
 //     return array;
 // }
 // console.log(selectionSort(arr));
-
-function insertionSort(array) {
-    for (let i = 1; i < array.length; i++) {
-        let currentValue = array[i]
-        let j;
-        for ( j = i-1; j>=0 && array[j] > currentValue; j--) {
-            array[j+1]=array[j]
+//  function insertionSort(array) {
+//     for (let i = 1; i < array.length; i++) {
+//         let currentValue = array[i]
+//         let j;
+//         for ( j = i-1; j>=0 && array[j] > currentValue; j--) {
+//             array[j+1]=array[j]
             
-        }
-        array[j+1]=currentValue;
+//         }
+//         array[j+1]=currentValue;
         
-    }
-    return array;
- }
-console.log(insertionSort(arr));
+//     }
+//     return array;
+//  }
+// console.log(insertionSort(arr));
+
+
 
 //10th task
+// function bubbleSort(array) {
+//     for (let i = 0; i < array.length; i++) {
+//         for (let j = 0; j < array.length; j++) {
+//             if (array[j]<array[j+1]) {
+//                 let temp;
+//                 temp=array[j];
+//                 array[j]=array[j+1];
+//                 array[j+1]=temp;
+    
+//             }
+            
+//         }
+    
+        
+//     }
+//     return array;
+// }
+// console.log(bubbleSort(arr));
