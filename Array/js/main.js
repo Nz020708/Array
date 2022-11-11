@@ -1,5 +1,4 @@
-const arr=[40,21,3,9,48,55,17,90];
-
+const arr=[1,2,3,4,5,6,7];
 
 
 //1st task
@@ -120,22 +119,26 @@ const arr=[40,21,3,9,48,55,17,90];
 
 
 //8th task
-function Func(array) {
-   if (array.length%2==0) {
-           for (let i = 0; i < array.length/2; i++) {
-                  let temp;
-                  temp=array[i];
-                  array[i]=array[i+array.length/2];
-                  array[i+array.length/2]=temp;
-     
-        
+function swapHalf(array) {
+      let n=(array.length/2).toFixed(0);
+           for (let i = 0; i < n; i++) {
+                  if (n<array.length) {
+                        let temp;
+                        temp=array[i];
+                        array[i]=array[n];
+                        array[n]=temp;
+                        n++;
+                        
+                  }
+                  
             }
-      }
+      
+      
       return array;
 
 }
   
-console.log(Func(arr));
+console.log(swapHalf(arr));
 //9th task
 
 // function bubbleSort(array) {
